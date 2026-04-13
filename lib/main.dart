@@ -1,24 +1,33 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MyApp());
+  }
 
-void main() { runApp(
+  class MyApp extends StatelessWidget {
 
-    MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.yellow,
-        appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
-          title: const Center(
-            child: Text('HELLO WORLD'),
+
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.deepPurpleAccent,
+          body: SafeArea(
+            child: Container(
+              height: 250,
+                width: 250,
+                margin:EdgeInsets.symmetric(
+                  vertical: 50.0,
+                  horizontal: 10,
+                ),
+                color: Colors.white,
+                child: Text(
+                  'NUR HAZELINA',
+                  ),
+                ),
           ),
-        ),
-        body: const Center(
-          child: Text(
-            'NUR HAZELINA',
-            style: TextStyle(fontSize: 50),
           ),
-        ),
-      ),
-    ),
-  );
-}
+            );
+    }
+  }
